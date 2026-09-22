@@ -151,6 +151,7 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
 .unity-foot { margin: 30px 0 0; color: var(--gold); font-size: clamp(17px, 1.6vw, 24px); }
 
 .two-col { display: grid; grid-template-columns: 1fr auto; align-items: center; }
+.xian-title { font-size: clamp(19px, 2vw, 30px); letter-spacing: .12em; }
 .seal { display: grid; place-items: center; width: clamp(120px, 15vw, 210px); aspect-ratio: 1; margin: 0; color: var(--red); border: 2px solid var(--red); border-radius: 50%; font: 500 clamp(62px, 8vw, 120px)/1 "STKaiti", "KaiTi", serif; transform: rotate(-8deg); }
 .story-flow { display: grid; grid-template-columns: repeat(7, auto); align-items: stretch; }
 .story-flow article { max-width: 260px; min-height: 210px; padding: 24px; border: 1px solid var(--line); }
@@ -205,7 +206,7 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
 .base-copy { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
 .keyword-orbits { position: absolute; right: 0; top: 50%; width: min(46vw, 650px); height: 480px; transform: translateY(-45%); }
 .keyword-orbits span { position: absolute; display: grid; place-items: center; width: clamp(112px, 12vw, 180px); aspect-ratio: 1; border-radius: 50%; border: 1px solid var(--ink); background: var(--paper); font-weight: 800; text-align: center; }
-.keyword-orbits span:nth-child(1) { left: 0; top: 0; width: clamp(150px, 15vw, 220px); }
+.keyword-orbits span:nth-child(1) { left: 0; top: -22%; width: clamp(150px, 15vw, 220px); }
 .keyword-orbits span:nth-child(2) { right: 5%; top: 12%; color: var(--paper); background: var(--red); border-color: var(--red); }
 .keyword-orbits span:nth-child(3) { left: 24%; bottom: 4%; }
 .keyword-orbits span:nth-child(4) { right: 0; bottom: 1%; width: clamp(138px, 14vw, 205px); }
@@ -221,7 +222,9 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
 .textbook-note { margin: 44px 0 0; color: var(--gold); font-weight: 700; line-height: 1.7; }
 
 .victory-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 6vw; align-items: center; }
-.victory-copy h2 { margin-bottom: 35px; }
+.victory-copy h2 { margin-bottom: 35px; font-size: clamp(48px, 5.6vw, 84px); line-height: 1.03; }
+.victory-copy h2 span { white-space: nowrap; }
+.victory > .chapter-inner > .eyebrow { font-size: clamp(17px, 1.7vw, 25px); }
 .victory-dates { display: grid; gap: 12px; }
 .victory-dates p { display: grid; grid-template-columns: 120px 1fr; gap: 15px; align-items: baseline; margin: 0; padding: 12px 0; border-top: 1px solid var(--line); }
 .victory-dates b { color: var(--red); font: 500 24px/1 Georgia, serif; }
@@ -291,6 +294,7 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
 .anthem-inner { min-height: 100vh; display: grid; grid-template-columns: .92fr 1.08fr; gap: 7vw; align-items: center; }
 .stand-call { width: fit-content; margin: 0 0 18px; padding: 8px 15px; color: #681010; background: #ffde00; font-size: clamp(18px, 2vw, 28px); font-weight: 900; letter-spacing: .08em; }
 .anthem h2 { max-width: 720px; font-size: clamp(46px, 6.5vw, 98px); }
+.anthem h2 span { display: inline-block; white-space: nowrap; font-size: .72em; }
 .anthem-tip { color: rgba(255,255,255,.72); font-size: 18px; line-height: 1.7; }
 .anthem-player { margin-top: 30px; max-width: 620px; }
 .anthem-player > button { display: flex; align-items: center; gap: 14px; padding: 13px 20px; border: 1px solid rgba(255,255,255,.6); border-radius: 999px; color: #fff; background: rgba(43,4,4,.35); font-weight: 800; cursor: pointer; backdrop-filter: blur(10px); }
@@ -338,7 +342,8 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
   .story-flow article { max-width: none; min-height: 0; }
   .story-flow > span { transform: rotate(90deg); justify-self: center; }
   .story-flow h3 { margin-top: 28px; }
-  .keyword-orbits { position: relative; inset: auto; width: 100%; height: 460px; margin-top: 30px; transform: none; }
+  .keyword-orbits { position: relative; inset: auto; width: 100%; height: 460px; margin-top: 70px; transform: none; }
+  .keyword-orbits span:nth-child(1) { top: -12%; }
   .pillar-grid, .victory-grid { grid-template-columns: 1fr; }
   .team-inner, .anthem-inner { grid-template-columns: 1fr; }
   .team-inner { gap: 40px; }

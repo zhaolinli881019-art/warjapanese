@@ -82,6 +82,9 @@ const quiz = [
   { question: '西安事变发生在哪一年？', options: ['1936年', '1938年', '1940年'], answer: 0 },
   { question: '全面抗战爆发的重要事件是什么？', options: ['九一八事变', '七七事变', '西安事变'], answer: 1 },
   { question: '抗日战争胜利是哪一年？', options: ['1941年', '1943年', '1945年'], answer: 2 },
+  { question: '西安事变和平解决推动了什么？', options: ['共同抗日', '扩大内战', '停止学习'], answer: 0 },
+  { question: '中国共产党领导的抗日武装主要开辟了什么战场？', options: ['海上战场', '敌后战场', '空中战场'], answer: 1 },
+  { question: '我们学习这段历史最重要的意义是什么？', options: ['延续仇恨', '珍爱和平', '忘记过去'], answer: 1 },
 ];
 
 const quizQuestion = document.querySelector('#quizQuestion');
