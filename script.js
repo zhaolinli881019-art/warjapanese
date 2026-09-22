@@ -149,7 +149,6 @@ const videoLoading = document.querySelector('#videoLoading');
 const viewerSource = document.querySelector('#viewerSource');
 let hlsPlayer = null;
 let clipStart = 0;
-let clipEnd = null;
 
 function destroyVideoStream() {
   eventVideo.pause();
@@ -178,7 +177,6 @@ function playFromClipStart() {
 function openEventVideo(button) {
   destroyVideoStream();
   clipStart = Number(button.dataset.start || 0);
-  clipEnd = button.dataset.end ? Number(button.dataset.end) : null;
   document.querySelector('#viewerYear').textContent = button.dataset.year;
   document.querySelector('#viewerTitle').textContent = button.dataset.videoTitle || button.dataset.event;
   document.querySelector('#viewerCopy').textContent = button.dataset.copy;
@@ -220,15 +218,6 @@ eventVideo.addEventListener('waiting', () => {
   videoLoading.textContent = '视频加载中，请稍候…';
   videoLoading.hidden = false;
 });
-eventVideo.addEventListener('timeupdate', () => {
-  if (Number.isFinite(clipEnd) && eventVideo.currentTime >= clipEnd) {
-    eventVideo.pause();
-    eventVideo.currentTime = clipStart;
-    videoLoading.textContent = '课堂节选播放完毕，可再次播放或查看央视完整视频。';
-    videoLoading.hidden = false;
-  }
-});
-
 viewerClose.addEventListener('click', closeEventViewer);
 eventViewer.addEventListener('click', (event) => {
   if (event.target === eventViewer) closeEventViewer();
