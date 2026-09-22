@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#11100e" />
+    <meta
+      name="description"
+      content="适合小学生讲解的《抗日战争的中流砥柱》互动历史课堂。"
+    />
+    <title>抗日战争的中流砥柱｜小小历史讲解员</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%2311100e'/%3E%3Ccircle cx='32' cy='32' r='19' fill='none' stroke='%23a74335' stroke-width='3'/%3E%3Cpath d='M18 34h28M24 24h16M28 18v28M36 18v28' stroke='%23f3eee3' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar" aria-label="讲解导航">
+      <a class="brand" href="#cover" aria-label="回到封面">
+        <span class="brand-mark">史</span>
+        <span>小小历史讲解员</span>
+      </a>
+      <div class="chapter-status" aria-live="polite">
+        <span id="chapterNumber">01</span><i></i><span>12</span>
+      </div>
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="chapterMenu">
+        <span>目录</span><b aria-hidden="true"></b>
+      </button>
+    </header>
+
+    <nav class="chapter-menu" id="chapterMenu" aria-label="章节目录" aria-hidden="true">
+      <p>CHAPTERS · 章节</p>
+      <ol>
+        <li><a href="#cover"><span>01</span>封面</a></li>
+        <li><a href="#timeline"><span>02</span>时间线</a></li>
+        <li><a href="#mukden"><span>03</span>九一八事变</a></li>
+        <li><a href="#nanjing"><span>04</span>南京大屠杀</a></li>
+        <li><a href="#unity"><span>05</span>团结抗战</a></li>
+        <li><a href="#xian"><span>06</span>西安事变</a></li>
+        <li><a href="#lugou"><span>07</span>全面抗战</a></li>
+        <li><a href="#base"><span>08</span>敌后战场</a></li>
+        <li><a href="#pillar"><span>09</span>中流砥柱</a></li>
+        <li><a href="#victory"><span>10</span>抗战胜利</a></li>
+        <li><a href="#peace"><span>11</span>珍爱和平</a></li>
+        <li><a href="#quiz"><span>12</span>课堂问答</a></li>
+      </ol>
+    </nav>
+
+    <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+
+    <main>
+      <section class="chapter hero dark" id="cover" data-chapter="1">
+        <img class="hero-image" src="./assets/history-hero.png" alt="长城、卢沟桥与普通民众剪影组成的历史档案插画" />
+        <div class="hero-shade"></div>
+        <div class="chapter-inner hero-copy">
+          <p class="eyebrow">第3课 · 小学课堂讲解版</p>
+          <h1>抗日战争的<br /><strong>中流砥柱</strong></h1>
+          <p class="lead">从1931到1945，沿着六个重要时间点，读懂十四年艰苦抗战。</p>
+          <div class="hero-tags" aria-label="学习主题">
+            <span>勿忘国耻</span><span>铭记历史</span><span>珍爱和平</span>
+          </div>
+          <a class="start-link" href="#timeline">开始讲解 <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-index" aria-hidden="true">1931—1945</div>
+      </section>
+
+      <section class="chapter paper" id="timeline" data-chapter="2">
+        <div class="chapter-inner wide">
+          <div class="section-heading">
+            <p class="eyebrow">一条时间线 · 先看懂整课</p>
+            <h2>十四年，六个关键时间点</h2>
+          </div>
+          <div class="timeline" aria-label="1931年至1945年抗战时间线">
+            <article><b>1931</b><span>九一八事变</span><small>局部抗战开始</small></article>
+            <article><b>1936</b><span>西安事变</span><small>推动共同抗日</small></article>
+            <article><b>1937</b><span>七七事变</span><small>全面抗战爆发</small></article>
+            <article><b>1937.12</b><span>南京大屠杀</span><small>不能忘记的灾难</small></article>
+            <article><b>1938—45</b><span>艰苦抗战</span><small>军民共同坚持</small></article>
+            <article><b>1945</b><span>抗战胜利</span><small>迎来胜利时刻</small></article>
+          </div>
+          <p class="big-note"><span>14</span> 年抗战 · 1931—1945</p>
+        </div>
+        <button class="speaker-button" type="button" data-note="note-2">看看我怎么讲</button>
+        <aside class="speaker-note" id="note-2" hidden>
+          <button type="button" aria-label="关闭讲解提示">×</button>
+          <p>在详细学习之前，我们先看一条时间线。1931年九一八事变发生，1937年七七事变后全面抗战爆发，一直到1945年取得胜利，前后一共经历了十四年。</p>
+        </aside>
+      </section>
+
+      <section class="chapter split dark" id="mukden" data-chapter="3">
+        <figure class="photo-panel">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/3/3d/%E4%B9%9D%E4%B8%80%E5%85%AB%E4%BA%8B%E5%8F%98%E6%AE%8B%E5%8E%86%E7%A2%91_Mukden_Incident_-_panoramio.jpg"
+            alt="沈阳九一八历史博物馆残历碑"
+            loading="lazy"
+          />
+          <figcaption>九一八事变残历碑 · 沈阳</figcaption>
+        </figure>
+        <div class="split-copy">
+          <p class="eyebrow">勿忘国耻 · 中国东北</p>
+          <p class="giant-year">1931</p>
+          <h2>九一八事变</h2>
+          <dl class="fact-list">
+            <div><dt>时间</dt><dd>9月18日</dd></div>
+            <div><dt>地点</dt><dd>中国东北</dd></div>
+            <div><dt>影响</dt><dd>东北陷入严重危机，中国人民开始艰苦抗日斗争</dd></div>
+          </dl>
+          <blockquote>“九一八，九一八，从那个悲惨的时候……”</blockquote>
+        </div>
+        <button class="speaker-button light-button" type="button" data-note="note-3">看看我怎么讲</button>
+        <aside class="speaker-note" id="note-3" hidden>
+          <button type="button" aria-label="关闭讲解提示">×</button>
+          <p>1931年，日本发动九一八事变，中国东北陷入战争。很多百姓被迫离开家乡。《松花江上》唱出了东北人民失去家乡后的悲痛。我们记住的不只是日期，更是战争给普通人带来的灾难。</p>
+        </aside>
+      </section>
+
+      <section class="chapter split paper reverse" id="nanjing" data-chapter="4">
+        <figure class="photo-panel solemn">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Victims_300%2C000_-_Nanjing_Massacre_Memorial_Hall.jpg"
+            alt="侵华日军南京大屠杀遇难同胞纪念馆三十万遇难者纪念墙"
+            loading="lazy"
+          />
+          <figcaption>南京大屠杀死难者纪念墙</figcaption>
+        </figure>
+        <div class="split-copy">
+          <p class="eyebrow">不能忘记的历史</p>
+          <p class="giant-year red">1937</p>
+          <h2>南京大屠杀</h2>
+          <p class="body-copy">12月13日，日军攻占南京。随后发生了持续数周的大规模杀戮和暴行。南京大屠杀死难者达<strong>30万人以上</strong>。</p>
+          <div class="date-card"><b>12月13日</b><span>南京大屠杀死难者国家公祭日</span></div>
+          <p class="peace-line">铭记历史，不是为了延续仇恨，而是为了珍爱和平。</p>
+        </div>
+        <button class="speaker-button" type="button" data-note="note-4">看看我怎么讲</button>
+        <aside class="speaker-note" id="note-4" hidden>
+          <button type="button" aria-label="关闭讲解提示">×</button>
+          <p>1937年12月13日，日军攻占南京，随后发生南京大屠杀。这是战争给普通人民带来的巨大灾难。今天设立国家公祭日，是为了铭记历史、珍爱和平。</p>
+        </aside>
+      </section>
+
+      <section class="chapter unity dark" id="unity" data-chapter="5">
+        <div class="chapter-inner wide">
+          <p class="eyebrow">面对侵略，中国人民怎么办？</p>
+          <h2>团结抗战</h2>
+          <div class="unity-grid">
+            <article><span>武</span><h3>抗日武装</h3><p>奔赴前线，抵抗侵略</p></article>
+            <article><span>守</span><h3>正面战场</h3><p>将士们英勇作战</p></article>
+            <article><span>织</span><h3>普通百姓</h3><p>生产物资，参加救亡</p></article>
+            <article><span>医</span><h3>海外华侨</h3><p>捐款支援，回国救护</p></article>
+          </div>
+          <p class="unity-foot">抗战不只是军人的事情，越来越多的人都行动了起来。</p>
+        </div>
+        <button class="speaker-button light-button" type="button" data-note="note-5">看看我怎么讲</button>
+        <aside class="speaker-note" id="note-5" hidden>
+          <button type="button" aria-label="关闭讲解提示">×</button>
+          <p>工人、农民、学生、妇女、华侨等很多人都参加到抗战中。有的人拿起武器，有的人生产物资，有的人参加医疗救护。抗日战争逐渐成为一场全民族共同参与的战争。</p>
+        </aside>
+      </section>
+
+      <section class="chapter paper" id="xian" data-chapter="6">
+        <div class="chapter-inner wide">
+          <div class="section-heading two-col">
+            <div><p class="eyebrow">1936 · 西安事变</p><h2>从内战走向共同抗日</h2></div>
+            <p class="seal" aria-hidden="true">和</p>
+          </div>
+          <div class="story-flow" aria-label="西安事变故事流程">
+            <article><small>当时的问题</small><h3>日本侵略扩大，国内却仍有内战</h3></article>
+            <span aria-hidden="true">→</span>
+            <article class="accent"><small>1936年12月12日</small><h3>张学良、杨虎城发动西安事变</h3></article>
+            <span aria-hidden="true">→</span>
+            <article><small>提出主张</small><h3>停止内战，共同抗日</h3></article>
+            <span aria-hidden="true">→</span>
+            <article><small>和平解决</small><h3>为再次合作抗日创造条件</h3></article>
+          </div>
+        </div>
+        <button class="speaker-button" type="button" data-note="note-6">看看我怎么讲</button>
+        <aside class="speaker-note" id="note-6" hidden>
+          <button type="button" aria-label="关闭讲解提示">×</button>
+          <p>西安事变的重要意义是：面对日本侵略，中国人需要停止内战、共同抵抗。西安事变和平解决后，国内不同政治力量共同抗日的条件进一步形成。</p>
+        </aside>
+      </section>
+
+      <section class="chapter split dark" id="lugou" data-chapter="7">
+        <figure class="photo-panel">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Marcopolobridge.jpg"
+            alt="北京卢沟桥石狮和桥面"
+            loading="lazy"
+          />
+          <figcaption>卢沟桥 · 北京</figcaption>
+        </figure>
+        <div class="split-copy">
+          <p class="eyebrow">1937年7月7日</p>
+          <h2>七七事变</h2>
+          <div class="cascade">
+            <p>日本进一步扩大侵华战争</p><i aria-hidden="true">↓</i>
+            <p>中国进入全民族抗战阶段</p><i aria-hidden="true">↓</i>
+            <strong>团结就是力量</strong>
+          </div>
+        </div>
+        <button class="speaker-button light-button" type="button" data-note="note-7">看看我怎么讲</button>
+        <aside class="speaker-note" id="note-7" hidden>
+          <button type="button" aria-label="关闭讲解提示">×</button>
+          <p>九一八事变以后，中国人民已经开始抗日。1937年七七事变发生后，日本发动全面侵华战争，中国也进入了全民族抗战阶段。</p>
+        </aside>
+      </section>
+
+      <section class="chapter base-map paper" id="base" data-chapter="8">
+        <div class="map-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="chapter-inner base-copy">
+          <p class="eyebrow">敌后战场 · 在敌人后方坚持抗战</p>
+          <h2>建立根据地，<br />发动群众，坚持抗战</h2>
+          <div class="keyword-orbits">
+            <span>抗日根据地</span><span>发动群众</span><span>延安</span><span>百团大战</span>
+          </div>
+          <p class="body-copy narrow">中国共产党领导的抗日武装深入敌后，建立抗日根据地，并开展了许多抗日作战。</p>
+        </div>
+        <button class="speaker-button" type="button" data-note="note-8">看看我怎么讲</button>
+        <aside class="speaker-note" id="note-8" hidden>
+          <button type="button" aria-label="关闭讲解提示">×</button>
+          <p>抗战时期，中国战场大体可以看到正面战场和敌后战场。中国共产党领导的军队深入敌后，建立抗日根据地，并开展了很多抗日作战。课本还介绍了百团大战等重要战斗。</p>
+        </aside>
+      </section>
+
+      <section class="chapter pillar dark" id="pillar" data-chapter="9">
+        <div class="pillar-mark" aria-hidden="true">柱</div>
+        <div class="chapter-inner wide">
+          <p class="eyebrow">为什么课文叫“中流砥柱”？</p>
+          <div class="pillar-grid">
+            <div class="definition"><h2>中流砥柱</h2><p>比喻在困难和危险中，发挥重要支撑作用的力量。</p></div>
+            <ol>
+              <li><b>01</b><span>倡导建立抗日民族统一战线</span></li>
+              <li><b>02</b><span>动员和组织群众参加抗战</span></li>
+              <li><b>03</b><span>开辟敌后战场，建立抗日根据地</span></li>
+              <li><b>04</b><span>坚持长期抗战</span></li>
+              <li><b>05</b><span>推动全民族共同抗战</span></li>
+            </ol>
+          </div>
+          <p class="textbook-note">本课教材把中国共产党在抗日战争中的作用概括为“抗日战争的中流砥柱”。</p>
+        </div>
+        <button class="speaker-button light-button" type="button" data-note="note-9">看看我怎么讲</button>
+        <aside class="speaker-note" id="note-9" hidden>
+          <button type="button" aria-label="关闭讲解提示">×</button>
+          <p>“中流砥柱”比喻在困难和危险中发挥重要支撑作用的力量。教材从统一战线、群众动员、敌后战场和长期抗战等方面，说明中国共产党发挥的作用。</p>
+        </aside>
+      </section>
+
+      <section class="chapter victory paper" id="victory" data-chapter="10">
+        <div class="chapter-inner wide">
+          <p class="eyebrow">1945 · 十四年抗战终于胜利</p>
+          <div class="victory-grid">
+            <div class="victory-copy">
+              <h2>胜利，来之不易</h2>
+              <div class="victory-dates">
+                <p><b>8月15日</b><span>日本宣布无条件投降</span></p>
+                <p><b>9月2日</b><span>日本代表正式签署投降书</span></p>
+                <p><b>9月3日</b><span>中国人民抗日战争胜利纪念日</span></p>
+              </div>
+              <figure class="victory-photo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/ShanghaiCelebratingJapaneseSurrender.jpg" alt="1945年上海民众庆祝抗战胜利" loading="lazy" />
+                <figcaption>1945年8月15日，上海民众庆祝胜利</figcaption>
+              </figure>
+            </div>
+            <figure class="video-card mini-film" id="miniFilm">
+              <div class="film-screen" aria-live="polite">
+                <div class="film-frame frame-one"><img src="./assets/history-hero.png" alt="" /><p><b>1931</b><span>九一八事变</span></p></div>
+                <div class="film-frame frame-two"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Marcopolobridge.jpg" alt="" /><p><b>1937</b><span>全民族抗战</span></p></div>
+                <div class="film-frame frame-three"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/ShanghaiCelebratingJapaneseSurrender.jpg" alt="" /><p><b>1945</b><span>抗战胜利</span></p></div>
+                <button class="film-play" id="filmPlay" type="button" aria-label="播放30秒动态历史回顾"><i aria-hidden="true"></i><span>播放</span></button>
+                <div class="film-progress" aria-hidden="true"><i></i></div>
+              </div>
+              <figcaption><span>动态历史回顾 · 30秒</span><b>从九一八事变到抗战胜利</b><small>点击播放；历史画面来自 Wikimedia Commons</small></figcaption>
+            </figure>
+          </div>
+        </div>
+        <button class="speaker-button" type="button" data-note="note-10">看看我怎么讲</button>
+        <aside class="speaker-note" id="note-10" hidden>
+          <button type="button" aria-label="关闭讲解提示">×</button>
+          <p>经过十四年的艰苦抗战，1945年中国人民终于迎来胜利。8月15日日本宣布无条件投降，9月2日签署投降书。9月3日后来被确定为中国人民抗日战争胜利纪念日。</p>
+        </aside>
+      </section>
+
+      <section class="chapter peace dark" id="peace" data-chapter="11">
+        <div class="chapter-inner peace-copy">
+          <p class="eyebrow">我们为什么还要学习这段历史？</p>
+          <h2>铭记历史，<br /><strong>不是为了仇恨</strong></h2>
+          <div class="peace-values">
+            <article><b>勿忘国耻</b><p>了解战争给人民带来的灾难</p></article>
+            <article><b>珍爱和平</b><p>知道今天的和平生活来之不易</p></article>
+            <article><b>勇于担当</b><p>珍惜学习机会，做好应该做的事</p></article>
+          </div>
+          <p class="closing-line">记住历史，是为了更好地走向未来。</p>
+        </div>
+        <button class="speaker-button light-button" type="button" data-note="note-11">看看我怎么讲</button>
+        <aside class="speaker-note" id="note-11" hidden>
+          <button type="button" aria-label="关闭讲解提示">×</button>
+          <p>我们学习抗日战争，不是为了记住仇恨，而是为了知道和平生活来之不易。现在能够安心学习、生活，更应该珍惜今天的和平。</p>
+        </aside>
+      </section>
+
+      <section class="chapter quiz paper" id="quiz" data-chapter="12">
+        <div class="chapter-inner quiz-inner">
+          <p class="eyebrow">课堂小问答 · 点击选择</p>
+          <h2 id="quizQuestion">九一八事变发生在哪一年？</h2>
+          <div class="quiz-options" id="quizOptions" role="group" aria-labelledby="quizQuestion"></div>
+          <p class="quiz-feedback" id="quizFeedback" aria-live="polite">第 1 题 / 共 5 题</p>
+          <button class="next-question" id="nextQuestion" type="button" hidden>下一题 →</button>
+          <div class="quiz-finish" id="quizFinish" hidden>
+            <b id="quizScore"></b>
+            <span>谢谢大家！</span>
+            <a href="#cover">再讲一次</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="page-controls" aria-label="章节切换">
+      <button id="prevChapter" type="button" aria-label="上一章">←</button>
+      <button id="nextChapter" type="button" aria-label="下一章">→</button>
+    </div>
+
+    <footer class="credits">
+      <details>
+        <summary>资料与图片来源</summary>
+        <div>
+          <p>历史日期与表述参考：中国政府网、全国人大常委会相关决定、人民网党史资料及司法部公开资料。</p>
+          <p>图片：九一八事变残历碑（ruiraykwok，CC BY-SA 3.0）；南京大屠杀死难者纪念墙（維基小霸王，CC BY-SA 4.0）；卢沟桥（陈鹰，CC BY 2.0）；1945年上海庆祝胜利照片（公共领域）。</p>
+          <p>动态回顾使用上述授权图片。另参考美国国家档案馆馆藏的1945年广州受降影像。封面插画由 AI 生成，用作课堂视觉辅助，不作为历史照片。</p>
+          <p><a href="https://www.gov.cn/xinwen/2015-08/28/content_2921555.htm" target="_blank" rel="noreferrer">中国政府网</a> · <a href="https://www.hengqin.gov.cn/lab/flfg/fl/content/post_3523275.html" target="_blank" rel="noreferrer">国家公祭日决定</a> · <a href="https://cpc.people.com.cn/BIG5/64107/65708/65722/4445224.html" target="_blank" rel="noreferrer">西安事变资料</a></p>
+        </div>
+      </details>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
