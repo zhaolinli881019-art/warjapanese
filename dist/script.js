@@ -142,47 +142,99 @@ nextQuestion.addEventListener('click', () => {
   quizFinish.hidden = false;
 });
 
-const miniFilm = document.querySelector('#miniFilm');
-const filmPlay = document.querySelector('#filmPlay');
-let filmTimer;
-if (miniFilm && filmPlay) {
-  filmPlay.addEventListener('click', () => {
-    clearTimeout(filmTimer);
-    miniFilm.classList.remove('playing');
-    void miniFilm.offsetWidth;
-    miniFilm.classList.add('playing');
-    filmTimer = setTimeout(() => miniFilm.classList.remove('playing'), 30000);
-  });
-}
-
 const eventViewer = document.querySelector('#eventViewer');
 const viewerClose = document.querySelector('#viewerClose');
-let viewerTimer;
+const eventVideo = document.querySelector('#eventVideo');
+const videoLoading = document.querySelector('#videoLoading');
+const viewerSource = document.querySelector('#viewerSource');
+let hlsPlayer = null;
+let clipStart = 0;
+let clipEnd = null;
 
-function closeEventViewer() {
-  clearTimeout(viewerTimer);
-  eventViewer.classList.remove('playing');
-  eventViewer.hidden = true;
+function destroyVideoStream() {
+  eventVideo.pause();
+  if (hlsPlayer) {
+    hlsPlayer.destroy();
+    hlsPlayer = null;
+  }
+  eventVideo.removeAttribute('src');
+  eventVideo.load();
 }
 
-document.querySelectorAll('.event-clip').forEach((button) => {
-  button.addEventListener('click', () => {
-    document.querySelector('#viewerImage').src = button.dataset.image;
-    document.querySelector('#viewerImage').alt = `${button.dataset.event}历史画面`;
-    document.querySelector('#viewerYear').textContent = button.dataset.year;
-    document.querySelector('#viewerTitle').textContent = button.dataset.event;
-    document.querySelector('#viewerCopy').textContent = button.dataset.copy;
-    eventViewer.hidden = false;
-    void eventViewer.offsetWidth;
-    eventViewer.classList.add('playing');
-    viewerClose.focus();
-    viewerTimer = setTimeout(closeEventViewer, 15000);
+function closeEventViewer() {
+  destroyVideoStream();
+  eventViewer.hidden = true;
+  document.body.style.overflow = '';
+}
+
+function playFromClipStart() {
+  if (Number.isFinite(clipStart) && clipStart > 0) eventVideo.currentTime = clipStart;
+  eventVideo.play().catch(() => {
+    videoLoading.textContent = '视频已准备好，请点击播放按钮。';
+    videoLoading.hidden = false;
   });
+}
+
+function openEventVideo(button) {
+  destroyVideoStream();
+  clipStart = Number(button.dataset.start || 0);
+  clipEnd = button.dataset.end ? Number(button.dataset.end) : null;
+  document.querySelector('#viewerYear').textContent = button.dataset.year;
+  document.querySelector('#viewerTitle').textContent = button.dataset.videoTitle || button.dataset.event;
+  document.querySelector('#viewerCopy').textContent = button.dataset.copy;
+  viewerSource.href = button.dataset.source;
+  eventVideo.poster = button.dataset.poster || '';
+  videoLoading.textContent = '视频加载中，请稍候…';
+  videoLoading.hidden = false;
+  eventViewer.hidden = false;
+  document.body.style.overflow = 'hidden';
+
+  const videoUrl = button.dataset.video;
+  if (eventVideo.canPlayType('application/vnd.apple.mpegurl')) {
+    eventVideo.src = videoUrl;
+    eventVideo.addEventListener('loadedmetadata', playFromClipStart, { once: true });
+  } else if (window.Hls && window.Hls.isSupported()) {
+    hlsPlayer = new window.Hls({ enableWorker: true });
+    hlsPlayer.loadSource(videoUrl);
+    hlsPlayer.attachMedia(eventVideo);
+    hlsPlayer.on(window.Hls.Events.MANIFEST_PARSED, playFromClipStart);
+    hlsPlayer.on(window.Hls.Events.ERROR, (_event, data) => {
+      if (!data.fatal) return;
+      videoLoading.innerHTML = '视频暂时无法加载，请点击下方“在央视网观看完整视频”。';
+      videoLoading.hidden = false;
+    });
+  } else {
+    videoLoading.innerHTML = '当前浏览器不支持此视频格式，请点击下方“在央视网观看完整视频”。';
+  }
+}
+
+document.querySelectorAll('.event-video').forEach((button) => {
+  button.addEventListener('click', () => {
+    openEventVideo(button);
+  });
+});
+
+eventVideo.addEventListener('playing', () => { videoLoading.hidden = true; });
+eventVideo.addEventListener('canplay', () => { videoLoading.hidden = true; });
+eventVideo.addEventListener('waiting', () => {
+  videoLoading.textContent = '视频加载中，请稍候…';
+  videoLoading.hidden = false;
+});
+eventVideo.addEventListener('timeupdate', () => {
+  if (Number.isFinite(clipEnd) && eventVideo.currentTime >= clipEnd) {
+    eventVideo.pause();
+    eventVideo.currentTime = clipStart;
+    videoLoading.textContent = '课堂节选播放完毕，可再次播放或查看央视完整视频。';
+    videoLoading.hidden = false;
+  }
 });
 
 viewerClose.addEventListener('click', closeEventViewer);
 eventViewer.addEventListener('click', (event) => {
   if (event.target === eventViewer) closeEventViewer();
+});
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && !eventViewer.hidden) closeEventViewer();
 });
 
 const anthemAudio = document.querySelector('#anthemAudio');
