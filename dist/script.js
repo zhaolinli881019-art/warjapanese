@@ -1,3 +1,9 @@
+const chapterOrder = [
+  'cover', 'team', 'timeline', 'mukden', 'xian', 'lugou', 'nanjing',
+  'unity', 'base', 'pillar', 'victory', 'peace', 'quiz', 'anthem',
+];
+const main = document.querySelector('main');
+chapterOrder.forEach((id) => main.appendChild(document.querySelector(`#${id}`)));
 const chapters = [...document.querySelectorAll('.chapter')];
 const chapterNumber = document.querySelector('#chapterNumber');
 const progressBar = document.querySelector('#progressBar');
@@ -33,7 +39,7 @@ prevButton.addEventListener('click', () => goToChapter(-1));
 nextButton.addEventListener('click', () => goToChapter(1));
 
 window.addEventListener('keydown', (event) => {
-  if (event.target.matches('button, a, video')) return;
+  if (event.target.matches('button, a, video, audio')) return;
   if (['ArrowDown', 'ArrowRight', 'PageDown'].includes(event.key)) {
     event.preventDefault();
     goToChapter(1);
@@ -145,6 +151,94 @@ if (miniFilm && filmPlay) {
     filmTimer = setTimeout(() => miniFilm.classList.remove('playing'), 30000);
   });
 }
+
+const eventViewer = document.querySelector('#eventViewer');
+const viewerClose = document.querySelector('#viewerClose');
+let viewerTimer;
+
+function closeEventViewer() {
+  clearTimeout(viewerTimer);
+  eventViewer.classList.remove('playing');
+  eventViewer.hidden = true;
+}
+
+document.querySelectorAll('.event-clip').forEach((button) => {
+  button.addEventListener('click', () => {
+    document.querySelector('#viewerImage').src = button.dataset.image;
+    document.querySelector('#viewerImage').alt = `${button.dataset.event}历史画面`;
+    document.querySelector('#viewerYear').textContent = button.dataset.year;
+    document.querySelector('#viewerTitle').textContent = button.dataset.event;
+    document.querySelector('#viewerCopy').textContent = button.dataset.copy;
+    eventViewer.hidden = false;
+    void eventViewer.offsetWidth;
+    eventViewer.classList.add('playing');
+    viewerClose.focus();
+    viewerTimer = setTimeout(closeEventViewer, 15000);
+  });
+});
+
+viewerClose.addEventListener('click', closeEventViewer);
+eventViewer.addEventListener('click', (event) => {
+  if (event.target === eventViewer) closeEventViewer();
+});
+
+const anthemAudio = document.querySelector('#anthemAudio');
+const anthemPlay = document.querySelector('#anthemPlay');
+const anthemCurrent = document.querySelector('#anthemCurrent');
+const anthemDuration = document.querySelector('#anthemDuration');
+const anthemProgress = document.querySelector('#anthemProgress');
+const lyricsViewport = document.querySelector('#lyricsViewport');
+const lyricLines = [...document.querySelectorAll('#anthemLyrics li')];
+let activeLyric = -1;
+
+function formatTime(seconds) {
+  const safe = Number.isFinite(seconds) ? seconds : 0;
+  return `${String(Math.floor(safe / 60)).padStart(2, '0')}:${String(Math.floor(safe % 60)).padStart(2, '0')}`;
+}
+
+function updateAnthem() {
+  const duration = anthemAudio.duration || 49.7;
+  anthemCurrent.textContent = formatTime(anthemAudio.currentTime);
+  anthemDuration.textContent = formatTime(duration);
+  anthemProgress.style.width = `${Math.min(100, (anthemAudio.currentTime / duration) * 100)}%`;
+
+  const nextLyric = lyricLines.reduce((found, line, index) => (
+    anthemAudio.currentTime >= Number(line.dataset.time) ? index : found
+  ), 0);
+  if (nextLyric !== activeLyric) {
+    activeLyric = nextLyric;
+    lyricLines.forEach((line, index) => line.classList.toggle('active', index === activeLyric));
+    const line = lyricLines[activeLyric];
+    lyricsViewport.scrollTo({
+      top: line.offsetTop - (lyricsViewport.clientHeight / 2) + (line.clientHeight / 2),
+      behavior: 'smooth',
+    });
+  }
+}
+
+anthemPlay.addEventListener('click', () => {
+  if (anthemAudio.paused) {
+    anthemAudio.play();
+  } else {
+    anthemAudio.pause();
+  }
+});
+
+anthemAudio.addEventListener('play', () => {
+  anthemPlay.classList.add('playing');
+  anthemPlay.querySelector('span').textContent = '暂停播放';
+});
+anthemAudio.addEventListener('pause', () => {
+  anthemPlay.classList.remove('playing');
+  anthemPlay.querySelector('span').textContent = anthemAudio.ended ? '重新播放' : '继续播放';
+});
+anthemAudio.addEventListener('loadedmetadata', updateAnthem);
+anthemAudio.addEventListener('timeupdate', updateAnthem);
+anthemAudio.addEventListener('ended', () => {
+  anthemAudio.currentTime = 0;
+  activeLyric = -1;
+  updateAnthem();
+});
 
 renderQuestion();
 setActiveChapter(0);

@@ -23,7 +23,7 @@
         <span>小小历史讲解员</span>
       </a>
       <div class="chapter-status" aria-live="polite">
-        <span id="chapterNumber">01</span><i></i><span>12</span>
+        <span id="chapterNumber">01</span><i></i><span>14</span>
       </div>
       <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="chapterMenu">
         <span>目录</span><b aria-hidden="true"></b>
@@ -34,17 +34,19 @@
       <p>CHAPTERS · 章节</p>
       <ol>
         <li><a href="#cover"><span>01</span>封面</a></li>
-        <li><a href="#timeline"><span>02</span>时间线</a></li>
-        <li><a href="#mukden"><span>03</span>九一八事变</a></li>
-        <li><a href="#nanjing"><span>04</span>南京大屠杀</a></li>
-        <li><a href="#unity"><span>05</span>团结抗战</a></li>
-        <li><a href="#xian"><span>06</span>西安事变</a></li>
-        <li><a href="#lugou"><span>07</span>全面抗战</a></li>
-        <li><a href="#base"><span>08</span>敌后战场</a></li>
-        <li><a href="#pillar"><span>09</span>中流砥柱</a></li>
-        <li><a href="#victory"><span>10</span>抗战胜利</a></li>
-        <li><a href="#peace"><span>11</span>珍爱和平</a></li>
-        <li><a href="#quiz"><span>12</span>课堂问答</a></li>
+        <li><a href="#team"><span>02</span>课堂分工</a></li>
+        <li><a href="#timeline"><span>03</span>时间线</a></li>
+        <li><a href="#mukden"><span>04</span>九一八事变</a></li>
+        <li><a href="#xian"><span>05</span>西安事变</a></li>
+        <li><a href="#lugou"><span>06</span>七七事变</a></li>
+        <li><a href="#nanjing"><span>07</span>南京大屠杀</a></li>
+        <li><a href="#unity"><span>08</span>团结抗战</a></li>
+        <li><a href="#base"><span>09</span>敌后战场</a></li>
+        <li><a href="#pillar"><span>10</span>中流砥柱</a></li>
+        <li><a href="#victory"><span>11</span>抗战胜利</a></li>
+        <li><a href="#peace"><span>12</span>珍爱和平</a></li>
+        <li><a href="#quiz"><span>13</span>课堂问答</a></li>
+        <li><a href="#anthem"><span>14</span>全体合唱</a></li>
       </ol>
     </nav>
 
@@ -61,9 +63,28 @@
           <div class="hero-tags" aria-label="学习主题">
             <span>勿忘国耻</span><span>铭记历史</span><span>珍爱和平</span>
           </div>
-          <a class="start-link" href="#timeline">开始讲解 <span aria-hidden="true">↓</span></a>
+          <a class="start-link" href="#team">开始讲解 <span aria-hidden="true">↓</span></a>
         </div>
         <div class="hero-index" aria-hidden="true">1931—1945</div>
+      </section>
+
+      <section class="chapter team paper" id="team" data-chapter="2">
+        <div class="chapter-inner wide team-inner">
+          <div class="team-heading">
+            <p class="eyebrow">今天的课堂 · 我们共同完成</p>
+            <h2>小小历史讲解团队</h2>
+            <p>每一位同学都有任务，也都是这堂课的重要一员。</p>
+          </div>
+          <div class="team-grid">
+            <article class="team-lead"><small>主讲</small><b>黄谋泽</b><span>带大家走进这段历史</span></article>
+            <article><small>页面制作</small><b>黄谋泽</b></article>
+            <article><small>内容来源</small><b>ChatGPT Codex</b></article>
+            <article><small>购买奖品</small><b>王辰逸</b></article>
+            <article><small>奖品发放</small><b>王辰逸</b></article>
+            <article><small>页面播放</small><b>汪含泽</b></article>
+            <article><small>课堂表现记录</small><b>肖锐航</b></article>
+          </div>
+        </div>
       </section>
 
       <section class="chapter paper" id="timeline" data-chapter="2">
@@ -108,6 +129,7 @@
             <div><dt>影响</dt><dd>东北陷入严重危机，中国人民开始艰苦抗日斗争</dd></div>
           </dl>
           <blockquote>“九一八，九一八，从那个悲惨的时候……”</blockquote>
+          <button class="event-clip" type="button" data-event="九一八事变" data-year="1931" data-copy="东北危急，中国人民开始了艰苦的抗日斗争。" data-image="https://upload.wikimedia.org/wikipedia/commons/3/3d/%E4%B9%9D%E4%B8%80%E5%85%AB%E4%BA%8B%E5%8F%98%E6%AE%8B%E5%8E%86%E7%A2%91_Mukden_Incident_-_panoramio.jpg"><i></i><span><small>事件短片</small>点击播放 · 约15秒</span></button>
         </div>
         <button class="speaker-button light-button" type="button" data-note="note-3">看看我怎么讲</button>
         <aside class="speaker-note" id="note-3" hidden>
@@ -132,6 +154,7 @@
           <p class="body-copy">12月13日，日军攻占南京。随后发生了持续数周的大规模杀戮和暴行。南京大屠杀死难者达<strong>30万人以上</strong>。</p>
           <div class="date-card"><b>12月13日</b><span>南京大屠杀死难者国家公祭日</span></div>
           <p class="peace-line">铭记历史，不是为了延续仇恨，而是为了珍爱和平。</p>
+          <button class="event-clip ink-clip" type="button" data-event="南京大屠杀" data-year="1937.12" data-copy="铭记遇难同胞，记住战争给人民带来的深重灾难。" data-image="https://upload.wikimedia.org/wikipedia/commons/1/1b/Victims_300%2C000_-_Nanjing_Massacre_Memorial_Hall.jpg"><i></i><span><small>事件短片</small>点击播放 · 约15秒</span></button>
         </div>
         <button class="speaker-button" type="button" data-note="note-4">看看我怎么讲</button>
         <aside class="speaker-note" id="note-4" hidden>
@@ -174,6 +197,7 @@
             <span aria-hidden="true">→</span>
             <article><small>和平解决</small><h3>为再次合作抗日创造条件</h3></article>
           </div>
+          <button class="event-clip ink-clip flow-clip" type="button" data-event="西安事变" data-year="1936" data-copy="停止内战、共同抗日，和平解决为再次合作抗日创造了条件。" data-image="./assets/history-hero.png"><i></i><span><small>事件短片</small>点击播放 · 约15秒</span></button>
         </div>
         <button class="speaker-button" type="button" data-note="note-6">看看我怎么讲</button>
         <aside class="speaker-note" id="note-6" hidden>
@@ -199,6 +223,7 @@
             <p>中国进入全民族抗战阶段</p><i aria-hidden="true">↓</i>
             <strong>团结就是力量</strong>
           </div>
+          <button class="event-clip" type="button" data-event="七七事变" data-year="1937.7.7" data-copy="卢沟桥畔的枪声，标志着全民族抗战的开始。" data-image="https://upload.wikimedia.org/wikipedia/commons/1/1c/Marcopolobridge.jpg"><i></i><span><small>事件短片</small>点击播放 · 约15秒</span></button>
         </div>
         <button class="speaker-button light-button" type="button" data-note="note-7">看看我怎么讲</button>
         <aside class="speaker-note" id="note-7" hidden>
@@ -216,6 +241,7 @@
             <span>抗日根据地</span><span>发动群众</span><span>延安</span><span>百团大战</span>
           </div>
           <p class="body-copy narrow">中国共产党领导的抗日武装深入敌后，建立抗日根据地，并开展了许多抗日作战。</p>
+          <button class="event-clip ink-clip" type="button" data-event="艰苦抗战" data-year="1938—1945" data-copy="军民团结，在敌后建立根据地，坚持长期抗战。" data-image="./assets/history-hero.png"><i></i><span><small>事件短片</small>点击播放 · 约15秒</span></button>
         </div>
         <button class="speaker-button" type="button" data-note="note-8">看看我怎么讲</button>
         <aside class="speaker-note" id="note-8" hidden>
@@ -314,7 +340,52 @@
           </div>
         </div>
       </section>
+
+      <section class="chapter anthem dark" id="anthem" data-chapter="14">
+        <img class="anthem-flag" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" alt="中华人民共和国国旗——五星红旗" />
+        <div class="anthem-shade"></div>
+        <div class="chapter-inner wide anthem-inner">
+          <div class="anthem-copy">
+            <p class="eyebrow">课堂结束 · 庄严时刻</p>
+            <p class="stand-call">请全体起立</p>
+            <h2>一起唱<br />《义勇军进行曲》</h2>
+            <p class="anthem-tip">点击播放完整版，跟随滚动字幕齐声歌唱。</p>
+            <div class="anthem-player">
+              <button id="anthemPlay" type="button" aria-label="播放完整版义勇军进行曲"><i></i><span>播放完整版</span></button>
+              <div class="anthem-time"><span id="anthemCurrent">00:00</span><div><i id="anthemProgress"></i></div><span id="anthemDuration">00:50</span></div>
+              <audio id="anthemAudio" src="./assets/national-anthem.m4a" preload="metadata"></audio>
+            </div>
+          </div>
+          <div class="lyrics-card">
+            <p>同步歌词</p>
+            <div class="lyrics-viewport" id="lyricsViewport">
+              <ol id="anthemLyrics">
+                <li data-time="0">请全体起立，奏唱国歌</li>
+                <li data-time="6">起来！不愿做奴隶的人们！</li>
+                <li data-time="11">把我们的血肉，筑成我们新的长城！</li>
+                <li data-time="17.5">中华民族到了最危险的时候，</li>
+                <li data-time="23.5">每个人被迫着发出最后的吼声。</li>
+                <li data-time="29">起来！起来！起来！</li>
+                <li data-time="32.5">我们万众一心，</li>
+                <li data-time="35.5">冒着敌人的炮火，前进！</li>
+                <li data-time="39.5">冒着敌人的炮火，前进！</li>
+                <li data-time="43.5">前进！前进、进！</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <div class="event-viewer" id="eventViewer" hidden>
+      <button class="viewer-close" id="viewerClose" type="button" aria-label="关闭事件短片">×</button>
+      <div class="viewer-screen">
+        <img id="viewerImage" alt="" />
+        <div class="viewer-film-grain"></div>
+        <div class="viewer-caption"><b id="viewerYear"></b><h2 id="viewerTitle"></h2><p id="viewerCopy"></p></div>
+        <div class="viewer-progress"><i></i></div>
+      </div>
+    </div>
 
     <div class="page-controls" aria-label="章节切换">
       <button id="prevChapter" type="button" aria-label="上一章">←</button>
@@ -327,8 +398,8 @@
         <div>
           <p>历史日期与表述参考：中国政府网、全国人大常委会相关决定、人民网党史资料及司法部公开资料。</p>
           <p>图片：九一八事变残历碑（ruiraykwok，CC BY-SA 3.0）；南京大屠杀死难者纪念墙（維基小霸王，CC BY-SA 4.0）；卢沟桥（陈鹰，CC BY 2.0）；1945年上海庆祝胜利照片（公共领域）。</p>
-          <p>动态回顾使用上述授权图片。另参考美国国家档案馆馆藏的1945年广州受降影像。封面插画由 AI 生成，用作课堂视觉辅助，不作为历史照片。</p>
-          <p><a href="https://www.gov.cn/xinwen/2015-08/28/content_2921555.htm" target="_blank" rel="noreferrer">中国政府网</a> · <a href="https://www.hengqin.gov.cn/lab/flfg/fl/content/post_3523275.html" target="_blank" rel="noreferrer">国家公祭日决定</a> · <a href="https://cpc.people.com.cn/BIG5/64107/65708/65722/4445224.html" target="_blank" rel="noreferrer">西安事变资料</a></p>
+          <p>动态回顾使用上述授权图片。封面插画由 AI 生成，用作课堂视觉辅助，不作为历史照片。国歌音频采用中国政府网发布的管弦乐合唱完整版。</p>
+          <p><a href="https://www.gov.cn/xinwen/2015-08/28/content_2921555.htm" target="_blank" rel="noreferrer">中国政府网</a> · <a href="https://english.www.gov.cn/archive/chinaabc/202409/01/content_WS66d3ced4c6d0868f4e8ea6bb.html" target="_blank" rel="noreferrer">官方国歌音频</a> · <a href="https://www.hengqin.gov.cn/lab/flfg/fl/content/post_3523275.html" target="_blank" rel="noreferrer">国家公祭日决定</a> · <a href="https://cpc.people.com.cn/BIG5/64107/65708/65722/4445224.html" target="_blank" rel="noreferrer">西安事变资料</a></p>
         </div>
       </details>
     </footer>
