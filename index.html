@@ -14,7 +14,7 @@
       type="image/svg+xml"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%2311100e'/%3E%3Ccircle cx='32' cy='32' r='19' fill='none' stroke='%23a74335' stroke-width='3'/%3E%3Cpath d='M18 34h28M24 24h16M28 18v28M36 18v28' stroke='%23f3eee3' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20261014-4" />
   </head>
   <body>
     <header class="topbar" aria-label="讲解导航">
@@ -23,7 +23,7 @@
         <span>小小历史讲解员</span>
       </a>
       <div class="chapter-status" aria-live="polite">
-        <span id="chapterNumber">01</span><i></i><span>14</span>
+        <span id="chapterNumber">01</span><i></i><span>15</span>
       </div>
       <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="chapterMenu">
         <span>目录</span><b aria-hidden="true"></b>
@@ -38,15 +38,16 @@
         <li><a href="#timeline"><span>03</span>时间线</a></li>
         <li><a href="#mukden"><span>04</span>九一八事变</a></li>
         <li><a href="#xian"><span>05</span>西安事变</a></li>
-        <li><a href="#lugou"><span>06</span>七七事变</a></li>
-        <li><a href="#nanjing"><span>07</span>南京大屠杀</a></li>
-        <li><a href="#unity"><span>08</span>团结抗战</a></li>
-        <li><a href="#base"><span>09</span>敌后战场</a></li>
-        <li><a href="#pillar"><span>10</span>中流砥柱</a></li>
-        <li><a href="#victory"><span>11</span>抗战胜利</a></li>
-        <li><a href="#peace"><span>12</span>珍爱和平</a></li>
-        <li><a href="#quiz"><span>13</span>课堂问答</a></li>
-        <li><a href="#anthem"><span>14</span>全体合唱</a></li>
+        <li><a href="#xian-story"><span>06</span>西安事变讲解</a></li>
+        <li><a href="#lugou"><span>07</span>七七事变</a></li>
+        <li><a href="#nanjing"><span>08</span>南京大屠杀</a></li>
+        <li><a href="#unity"><span>09</span>团结抗战</a></li>
+        <li><a href="#base"><span>10</span>敌后战场</a></li>
+        <li><a href="#pillar"><span>11</span>中流砥柱</a></li>
+        <li><a href="#victory"><span>12</span>抗战胜利</a></li>
+        <li><a href="#peace"><span>13</span>珍爱和平</a></li>
+        <li><a href="#quiz"><span>14</span>课堂问答</a></li>
+        <li><a href="#anthem"><span>15</span>全体合唱</a></li>
       </ol>
     </nav>
 
@@ -59,7 +60,10 @@
         <div class="chapter-inner hero-copy">
           <p class="eyebrow">第3课 · 小学课堂讲解版</p>
           <h1>抗日战争的<br /><strong>中流砥柱</strong></h1>
-          <p class="lead">从1931到1945，沿着六个重要时间点，读懂十四年艰苦抗战。</p>
+          <p class="lead">
+            <span class="hero-lead-line">从1931到1945，沿着六个重要时间点，读懂十四年艰苦抗战。</span>
+            <span class="hero-subline">中国人不能忘记的历史。</span>
+          </p>
           <div class="hero-tags" aria-label="学习主题">
             <span>勿忘国耻</span><span>铭记历史</span><span>珍爱和平</span>
           </div>
@@ -73,7 +77,7 @@
           <div class="team-heading">
             <p class="eyebrow">今天的课堂 · 我们共同完成</p>
             <h2>小小历史讲解团队</h2>
-            <p>每一位同学都有任务，也都是这堂课的重要一员。</p>
+            <p>每一位同学都有任务，<br />也都是这堂课的重要一员。</p>
           </div>
           <div class="team-grid">
             <article class="team-lead"><small>主讲</small><b>黄谋泽</b><span>带大家走进这段历史</span></article>
@@ -111,13 +115,21 @@
       </section>
 
       <section class="chapter split dark" id="mukden" data-chapter="3">
-        <figure class="photo-panel">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/3/3d/%E4%B9%9D%E4%B8%80%E5%85%AB%E4%BA%8B%E5%8F%98%E6%AE%8B%E5%8E%86%E7%A2%91_Mukden_Incident_-_panoramio.jpg"
-            alt="沈阳九一八历史博物馆残历碑"
-            loading="lazy"
-          />
-        </figure>
+        <article class="mukden-story" aria-label="九一八事变讲解稿">
+          <p class="story-date"><span>1931</span><i></i><span>09·18</span></p>
+          <figure class="mukden-inset-photo" aria-label="九一八历史博物馆残历碑">
+            <img src="./assets/mukden-memorial.jpg" alt="九一八历史博物馆残历碑与五星红旗" />
+          </figure>
+          <h3>故事要从<br /><strong>1931年9月18日</strong><br />说起。</h3>
+          <div class="story-text">
+            <p>那一天晚上，日本军队故意炸坏了一小段铁路，却说是中国军队干的。</p>
+            <p>他们以这个理由，突然向沈阳的中国军队发动攻击。</p>
+            <p>后来，日本军队逐步占领了中国东北大片土地，让许多中国老百姓失去了家园。</p>
+            <p class="story-definition">这就是<strong>九一八事变</strong>。</p>
+            <p>九一八事变标志着中国人民抗日战争的开始。</p>
+          </div>
+          <p class="story-reminder">所以，每年的9月18日，我们都会想起这段历史，<br />提醒自己不能忘记曾经遭受的侵略。</p>
+        </article>
         <div class="split-copy">
           <p class="eyebrow">勿忘国耻 · 中国东北</p>
           <p class="giant-year">1931</p>
@@ -138,18 +150,25 @@
       </section>
 
       <section class="chapter split paper reverse" id="nanjing" data-chapter="4">
-        <figure class="photo-panel solemn">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Victims_300%2C000_-_Nanjing_Massacre_Memorial_Hall.jpg"
-            alt="侵华日军南京大屠杀遇难同胞纪念馆三十万遇难者纪念墙"
-            loading="lazy"
-          />
-          <figcaption>南京大屠杀死难者纪念墙</figcaption>
-        </figure>
+        <article class="nanjing-story" aria-label="南京大屠杀讲解稿">
+          <p class="story-date"><span>1937</span><i></i><span>12·13</span></p>
+          <h3>一段不能忘记的<br /><strong>悲痛记忆</strong></h3>
+          <div class="nanjing-story-copy">
+            <p>1937年12月13日，南京被日本侵略军占领。</p>
+            <p>在接下来的大约六个星期里，日军杀害了大量无辜百姓和放下武器的中国军人。</p>
+            <p>根据战后中国法庭的判决，有<strong>30多万中国同胞</strong>在南京大屠杀中遇难。</p>
+            <p>这是中国历史上一段非常悲痛的记忆。</p>
+            <p>今天，在南京有一座侵华日军南京大屠杀遇难同胞纪念馆，纪念那些不幸遇难的人们。</p>
+          </div>
+          <p class="nanjing-story-result">我们学习这段历史，不是为了仇恨，而是为了记住战争的残酷。<br />我们更应该珍惜今天和平、幸福的生活。</p>
+        </article>
         <div class="split-copy">
           <p class="eyebrow">不能忘记的历史</p>
           <p class="giant-year red">1937</p>
           <h2>南京大屠杀</h2>
+          <figure class="nanjing-main-photo" aria-label="南京大屠杀遇难者纪念墙">
+            <img src="./assets/nanjing-memorial-wall.jpg" alt="侵华日军南京大屠杀遇难同胞纪念馆遇难者纪念墙" />
+          </figure>
           <p class="body-copy">12月13日，日军攻占南京。随后发生了持续数周的大规模杀戮和暴行。南京大屠杀死难者达<strong>30万人以上</strong>。</p>
           <div class="date-card"><b>12月13日</b><span>南京大屠杀死难者国家公祭日</span></div>
           <p class="peace-line">铭记历史，不是为了延续仇恨，而是为了珍爱和平。</p>
@@ -190,13 +209,17 @@
           <div class="story-flow" aria-label="西安事变故事流程">
             <article><small>当时的问题</small><h3>日本侵略扩大，国内却仍有内战</h3></article>
             <span aria-hidden="true">→</span>
-            <article class="accent"><small>1936年12月12日</small><h3>张学良、杨虎城发动西安事变</h3></article>
+            <article class="accent">
+              <small>1936年12月12日</small><h3>张学良、杨虎城发动西安事变</h3>
+              <figure class="xian-generals-photo" aria-label="张学良与杨虎城历史照片">
+                <img src="./assets/xian-generals.jpg" alt="张学良与杨虎城历史照片" />
+              </figure>
+            </article>
             <span aria-hidden="true">→</span>
             <article><small>提出主张</small><h3>停止内战，共同抗日</h3></article>
             <span aria-hidden="true">→</span>
             <article><small>和平解决</small><h3>为再次合作抗日创造条件</h3></article>
           </div>
-          <button class="event-clip event-video ink-clip flow-clip" type="button" data-event="西安事变" data-video-title="张学良、杨虎城发动西安事变" data-year="1936" data-copy="完整介绍西安事变的起因、经过及其推动共同抗日的重要意义。" data-video="https://hls.cntv.lxdns.com/asp/hls/main/0303000a/3/default/2abb9ea6326c43f9a60123727149c5ef/main.m3u8?maxbr=2048" data-poster="https://p4.img.cctvpic.com/fmspic/2021/09/15/2abb9ea6326c43f9a60123727149c5ef-1.jpg" data-source="https://tv.cctv.com/2021/09/15/VIDEHhPAwe3kLNbSEkajoIGD210915.shtml" data-start="0"><i></i><span><small>央视完整短片</small>点击播放 · 4分56秒</span></button>
         </div>
         <button class="speaker-button" type="button" data-note="note-6">看看我怎么讲</button>
         <aside class="speaker-note" id="note-6" hidden>
@@ -205,14 +228,39 @@
         </aside>
       </section>
 
+      <section class="chapter paper xian-story-page" id="xian-story" data-chapter="6">
+        <div class="chapter-inner wide xian-story-inner">
+          <header class="xian-story-heading">
+            <p class="eyebrow">1936 · 西安事变讲解</p>
+            <h2>停止内战，<br /><strong>共同抗日</strong></h2>
+            <p class="xian-story-intro">一场发生在西安的重大事件，<br />推动中国人进一步团结起来。</p>
+            <button class="event-clip event-video ink-clip" type="button" data-event="西安事变" data-video-title="张学良、杨虎城发动西安事变" data-year="1936" data-copy="完整介绍西安事变的起因、经过及其推动共同抗日的重要意义。" data-video="https://hls.cntv.lxdns.com/asp/hls/main/0303000a/3/default/2abb9ea6326c43f9a60123727149c5ef/main.m3u8?maxbr=2048" data-poster="https://p4.img.cctvpic.com/fmspic/2021/09/15/2abb9ea6326c43f9a60123727149c5ef-1.jpg" data-source="https://tv.cctv.com/2021/09/15/VIDEHhPAwe3kLNbSEkajoIGD210915.shtml" data-start="0"><i></i><span><small>央视完整短片</small>点击播放 · 4分56秒</span></button>
+          </header>
+          <div class="xian-story-copy" aria-label="西安事变讲解稿">
+            <p>到了1936年，<br />日本已经侵占了中国东北，并继续向其他地区扩张。</p>
+            <p>可是当时，中国国内的国民党和共产党之间还在发生军事冲突。</p>
+            <p><strong>张学良</strong>和<strong>杨虎城</strong>两位将军认为，现在最重要的事情应该是抵抗日本侵略，而不是中国人自己打仗。</p>
+            <p>于是，他们在西安扣留了蒋介石，要求<strong>停止内战，共同抗日</strong>。</p>
+            <p>后来，在各方努力下，这件事得到了和平解决。</p>
+            <p class="xian-story-definition">这就是<strong>西安事变</strong>。</p>
+            <p class="xian-story-result">西安事变让国共两党进一步走向合作，<br />也为全国人民团结抗日创造了重要条件。</p>
+          </div>
+        </div>
+      </section>
+
       <section class="chapter split dark" id="lugou" data-chapter="7">
-        <figure class="photo-panel">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Marcopolobridge.jpg"
-            alt="北京卢沟桥石狮和桥面"
-            loading="lazy"
-          />
-        </figure>
+        <article class="lugou-story" aria-label="七七事变讲解稿">
+          <p class="story-date"><span>1937</span><i></i><span>07·07</span></p>
+          <h3>卢沟桥畔，<br /><strong>响起了枪声</strong></h3>
+          <div class="lugou-story-copy">
+            <p>1937年7月7日，在今天北京的卢沟桥附近，又发生了一件大事。</p>
+            <p>日本军队突然说，他们有一名士兵失踪了，要求进入中国军队守卫的宛平城搜查。</p>
+            <p>中国守军拒绝了这个无理要求。<br />可是日军却发动了进攻，向中国守军开枪，并炮轰宛平城。</p>
+            <p>面对侵略，中国守军奋起抵抗。</p>
+            <p class="lugou-story-definition">这就是<strong>七七事变</strong>，也叫<strong>卢沟桥事变</strong>。</p>
+          </div>
+          <p class="lugou-story-result">从这时起，日本发动了全面侵华战争，中国全民族抗战正式开始。<br />越来越多的中国人投入了保卫祖国的斗争。</p>
+        </article>
         <div class="split-copy">
           <p class="eyebrow">1937年7月7日</p>
           <h2>七七事变</h2>
@@ -232,19 +280,26 @@
 
       <section class="chapter base-map paper" id="base" data-chapter="8">
         <div class="map-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-        <div class="chapter-inner base-copy">
-          <p class="eyebrow">敌后战场 · 在敌人后方坚持抗战</p>
-          <h2>建立根据地，<br />发动群众，坚持抗战</h2>
-          <div class="keyword-orbits">
-            <span>抗日根据地</span><span>发动群众</span><span>延安</span><span>百团大战</span>
+        <div class="chapter-inner wide hundred-regiments">
+          <header class="hundred-heading">
+            <p class="eyebrow">1940 · 华北敌后战场</p>
+            <h2>百团<br /><strong>大战</strong></h2>
+            <p>中国人民并没有因为战争的困难而放弃抵抗。</p>
+          </header>
+          <div class="hundred-copy" aria-label="百团大战讲解稿">
+            <p>1940年8月，八路军在华北地区发动了一场大规模战役，叫作<strong>百团大战</strong>。</p>
+            <h3>为什么叫百团大战呢？</h3>
+            <p>因为这场战役先后有<strong>105个团、20多万名八路军战士</strong>参战，还有许多老百姓一起支援。</p>
+            <p>当时，日军主要依靠铁路和公路运送士兵、武器和物资。</p>
+            <p>八路军就主动出击，破坏敌人的铁路、桥梁和军事据点。</p>
+            <p class="hundred-result">这次战役沉重打击了日军，也让全国人民看到了坚持抗战的力量和希望。</p>
+            <button class="event-clip event-video ink-clip" type="button" data-event="敌后战场·百团大战" data-video-title="在百团大战主战场，军民同心痛击日寇" data-year="1940" data-copy="介绍百团大战的作战背景，以及军民团结抗战的经过。" data-video="https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/8e27edfd52be422f90a4fcb55fb1939a/main.m3u8?maxbr=2048" data-poster="https://p4.img.cctvpic.com/fmspic/2020/09/20/8e27edfd52be422f90a4fcb55fb1939a-30510493-1.jpg" data-source="https://tv.cctv.com/2020/09/20/VIDE0is5ektDiXLQSd3d6Jnm200920.shtml" data-start="0"><i></i><span><small>央视完整短片</small>点击播放 · 4分11秒</span></button>
           </div>
-          <p class="body-copy narrow">中国共产党领导的抗日武装深入敌后，建立抗日根据地，并开展了许多抗日作战。</p>
-          <button class="event-clip event-video ink-clip" type="button" data-event="敌后战场·百团大战" data-video-title="在百团大战主战场，军民同心痛击日寇" data-year="1940" data-copy="介绍百团大战的作战背景，以及军民团结抗战的经过。" data-video="https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/8e27edfd52be422f90a4fcb55fb1939a/main.m3u8?maxbr=2048" data-poster="https://p4.img.cctvpic.com/fmspic/2020/09/20/8e27edfd52be422f90a4fcb55fb1939a-30510493-1.jpg" data-source="https://tv.cctv.com/2020/09/20/VIDE0is5ektDiXLQSd3d6Jnm200920.shtml" data-start="0"><i></i><span><small>央视完整短片</small>点击播放 · 4分11秒</span></button>
         </div>
         <button class="speaker-button" type="button" data-note="note-8">看看我怎么讲</button>
         <aside class="speaker-note" id="note-8" hidden>
           <button type="button" aria-label="关闭讲解提示">×</button>
-          <p>抗战时期，中国战场大体可以看到正面战场和敌后战场。中国共产党领导的军队深入敌后，建立抗日根据地，并开展了很多抗日作战。课本还介绍了百团大战等重要战斗。</p>
+          <p>1940年8月，八路军在华北发动百团大战。105个团、20多万名战士参加作战，许多百姓共同支援。战役打击了日军的交通线和军事据点，让全国人民看到了坚持抗战的力量和希望。</p>
         </aside>
       </section>
 
@@ -283,8 +338,8 @@
                 <p><b>9月3日</b><span>中国人民抗日战争胜利纪念日</span></p>
               </div>
               <figure class="victory-photo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/ShanghaiCelebratingJapaneseSurrender.jpg" alt="1945年上海民众庆祝抗战胜利" loading="lazy" />
-                <figcaption>1945年8月15日，上海民众庆祝胜利</figcaption>
+                <img src="./assets/victory-surrender-signing.jpg" alt="1945年9月2日日本代表签署投降书" />
+                <figcaption>1945年9月2日，日本代表正式签署投降书</figcaption>
               </figure>
             </div>
             <figure class="video-card source-video-card">
@@ -307,13 +362,16 @@
       <section class="chapter peace dark" id="peace" data-chapter="11">
         <div class="chapter-inner peace-copy">
           <p class="eyebrow">我们为什么还要学习这段历史？</p>
+          <aside class="peace-reflection" aria-label="铭记历史讲解">
+            <p>在过去，无数先辈为了保卫我们的祖国，付出了巨大的努力，甚至献出了宝贵的生命。</p>
+          </aside>
           <h2>铭记历史，<br /><strong>不是为了仇恨</strong></h2>
           <div class="peace-values">
             <article><b>勿忘国耻</b><p>了解战争给人民带来的灾难</p></article>
             <article><b>珍爱和平</b><p>知道今天的和平生活来之不易</p></article>
             <article><b>勇于担当</b><p>珍惜学习机会，做好应该做的事</p></article>
           </div>
-          <p class="closing-line">记住历史，是为了更好地走向未来。</p>
+          <p class="closing-line">作为新时代的我们，更应该记住历史，珍惜来之不易的和平。</p>
         </div>
         <button class="speaker-button light-button" type="button" data-note="note-11">看看我怎么讲</button>
         <aside class="speaker-note" id="note-11" hidden>
@@ -338,7 +396,7 @@
       </section>
 
       <section class="chapter anthem dark" id="anthem" data-chapter="14">
-        <img class="anthem-flag" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" alt="中华人民共和国国旗——五星红旗" />
+        <img class="anthem-flag" src="./assets/china-flag.svg" alt="中华人民共和国国旗——五星红旗" />
         <div class="anthem-shade"></div>
         <div class="chapter-inner wide anthem-inner">
           <div class="anthem-copy">
@@ -405,6 +463,6 @@
     </footer>
 
     <script src="./assets/hls.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./script.js?v=20261014-4"></script>
   </body>
 </html>

@@ -88,7 +88,10 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
 .hero-copy { margin: 0 auto; padding-top: 150px; }
 .hero h1 { margin: 0; font-size: clamp(58px, 8.5vw, 130px); line-height: .95; }
 .hero h1 strong { color: var(--red-bright); font-weight: inherit; }
-.lead { max-width: 660px; margin: 30px 0 0; color: rgba(242,236,223,.72); font-size: clamp(18px, 1.8vw, 26px); line-height: 1.7; }
+.lead { max-width: none; margin: 30px 0 0; color: rgba(242,236,223,.72); font-size: clamp(18px, 1.8vw, 26px); line-height: 1.7; }
+.hero-lead-line, .hero-subline { display: block; }
+.hero-lead-line { white-space: nowrap; }
+.hero-subline { margin-top: 2px; }
 .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0; }
 .hero-tags span { padding: 8px 13px; border: 1px solid rgba(242,236,223,.3); border-radius: 999px; font-size: 13px; font-weight: 700; }
 .start-link { display: inline-flex; gap: 16px; align-items: center; padding: 13px 0; border-bottom: 1px solid rgba(242,236,223,.5); font-weight: 700; }
@@ -124,6 +127,40 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
 .photo-panel img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.06); transform: scale(1.015); }
 .photo-panel::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 120px rgba(0,0,0,.42); pointer-events: none; }
 .photo-panel figcaption { position: absolute; z-index: 2; left: 28px; bottom: 28px; padding: 8px 12px; color: #fff; background: rgba(0,0,0,.58); font-size: 12px; letter-spacing: .08em; }
+.mukden-story { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; margin: 0; padding: 112px clamp(52px, 6vw, 112px) 108px; overflow: hidden; color: var(--paper); background: #292724; }
+.mukden-story::before { content: "九一八"; position: absolute; right: -2vw; bottom: -2vw; color: rgba(242,236,223,.025); font: 500 clamp(160px, 22vw, 350px)/.78 "STSong", "Songti SC", serif; letter-spacing: -.12em; white-space: nowrap; pointer-events: none; }
+.mukden-story::after { content: ""; position: absolute; left: clamp(28px, 3.4vw, 62px); top: 18%; bottom: 16%; width: 1px; background: linear-gradient(transparent, rgba(198,84,66,.9) 16%, rgba(198,84,66,.4) 84%, transparent); }
+.story-date { position: relative; z-index: 1; display: flex; align-items: center; gap: 14px; margin: 0 0 28px; color: var(--red-bright); font: 800 13px/1 system-ui, sans-serif; letter-spacing: .18em; }
+.story-date i { width: 54px; height: 1px; background: currentColor; opacity: .65; }
+.mukden-inset-photo { position: absolute; z-index: 1; top: clamp(128px, 14.5vh, 160px); right: clamp(52px, 4.6vw, 82px); width: clamp(176px, 14.2vw, 256px); aspect-ratio: .92; margin: 0; overflow: hidden; transform: rotate(1.2deg); }
+.mukden-inset-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.mukden-story h3 { position: relative; z-index: 1; margin: 0 0 34px; font: 500 clamp(30px, 3vw, 52px)/1.35 "STSong", "Songti SC", "SimSun", serif; letter-spacing: -.03em; }
+.mukden-story h3 strong { color: var(--red-bright); font-weight: 500; }
+.story-text { position: relative; z-index: 1; display: grid; gap: 14px; max-width: 760px; }
+.story-text p { margin: 0; color: rgba(242,236,223,.72); font-size: clamp(16px, 1.12vw, 20px); line-height: 1.8; }
+.story-text .story-definition { margin: 4px 0; color: var(--paper); font: 500 clamp(21px, 1.7vw, 30px)/1.5 "STKaiti", "KaiTi", serif; }
+.story-definition strong { color: var(--red-bright); font-weight: 700; }
+.story-reminder { position: relative; z-index: 1; max-width: 760px; margin: 30px 0 0; padding: 18px 22px; border-left: 3px solid var(--red-bright); color: var(--paper); background: rgba(17,16,14,.34); font-size: clamp(16px, 1.15vw, 20px); line-height: 1.8; }
+.lugou-story { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; margin: 0; padding: 104px clamp(50px, 5.8vw, 106px) 96px; overflow: hidden; color: var(--paper); background: #292724; }
+.lugou-story::before { content: "卢沟桥"; position: absolute; left: -1.5vw; bottom: -1vw; color: rgba(242,236,223,.025); font: 500 clamp(150px, 19vw, 300px)/.78 "STSong", "Songti SC", serif; letter-spacing: -.14em; white-space: nowrap; pointer-events: none; }
+.lugou-story::after { content: ""; position: absolute; left: clamp(27px, 3.2vw, 58px); top: 17%; bottom: 15%; width: 1px; background: linear-gradient(transparent, rgba(198,84,66,.9) 15%, rgba(198,84,66,.38) 85%, transparent); }
+.lugou-story h3 { position: relative; z-index: 1; margin: 0 0 28px; font: 500 clamp(30px, 3.1vw, 50px)/1.28 "STSong", "Songti SC", "SimSun", serif; letter-spacing: -.03em; }
+.lugou-story h3 strong { color: var(--red-bright); font-weight: 500; }
+.lugou-story-copy { position: relative; z-index: 1; display: grid; gap: 12px; max-width: 760px; }
+.lugou-story-copy p { margin: 0; color: rgba(242,236,223,.72); font-size: clamp(15px, 1.06vw, 19px); line-height: 1.72; }
+.lugou-story-copy .lugou-story-definition { margin-top: 2px; color: var(--paper); font: 500 clamp(21px, 1.65vw, 29px)/1.5 "STKaiti", "KaiTi", serif; }
+.lugou-story-definition strong { color: var(--red-bright); font-weight: 700; }
+.lugou-story-result { position: relative; z-index: 1; max-width: 760px; margin: 25px 0 0; padding: 16px 20px; border-left: 3px solid var(--red-bright); color: var(--paper); background: rgba(17,16,14,.34); font-size: clamp(15px, 1.06vw, 19px); font-weight: 700; line-height: 1.72; }
+.split.reverse .nanjing-story { order: 2; }
+.nanjing-story { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; margin: 0; padding: 104px clamp(50px, 5.8vw, 106px) 96px; overflow: hidden; color: var(--paper); background: #292724; }
+.nanjing-story::before { content: "铭记"; position: absolute; right: -1vw; bottom: -2vw; color: rgba(242,236,223,.025); font: 500 clamp(170px, 21vw, 330px)/.78 "STSong", "Songti SC", serif; letter-spacing: -.12em; white-space: nowrap; pointer-events: none; }
+.nanjing-story::after { content: ""; position: absolute; left: clamp(27px, 3.2vw, 58px); top: 17%; bottom: 15%; width: 1px; background: linear-gradient(transparent, rgba(198,84,66,.9) 15%, rgba(198,84,66,.38) 85%, transparent); }
+.nanjing-story h3 { position: relative; z-index: 1; margin: 0 0 30px; font: 500 clamp(30px, 3.1vw, 50px)/1.3 "STSong", "Songti SC", "SimSun", serif; letter-spacing: -.03em; }
+.nanjing-story h3 strong { color: var(--red-bright); font-weight: 500; }
+.nanjing-story-copy { position: relative; z-index: 1; display: grid; gap: 13px; max-width: 760px; }
+.nanjing-story-copy p { margin: 0; color: rgba(242,236,223,.72); font-size: clamp(15px, 1.06vw, 19px); line-height: 1.72; }
+.nanjing-story-copy strong { color: var(--red-bright); font-weight: 800; }
+.nanjing-story-result { position: relative; z-index: 1; max-width: 760px; margin: 26px 0 0; padding: 17px 20px; border-left: 3px solid var(--red-bright); color: var(--paper); background: rgba(17,16,14,.34); font-size: clamp(15px, 1.06vw, 19px); font-weight: 700; line-height: 1.72; }
 .split-copy { align-self: center; padding: 112px clamp(30px, 6vw, 100px) 100px; }
 .split-copy h2 { margin-bottom: 30px; }
 .giant-year { margin: 0 0 10px; color: rgba(242,236,223,.16); font: 500 clamp(80px, 11vw, 170px)/.8 Georgia, serif; letter-spacing: -.07em; }
@@ -135,6 +172,9 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
 .split-copy blockquote { margin: 34px 0 0; padding-left: 20px; border-left: 3px solid var(--red-bright); color: rgba(242,236,223,.7); font-family: "STKaiti", "KaiTi", serif; font-size: clamp(20px, 2vw, 30px); line-height: 1.6; }
 .paper .split-copy .eyebrow { color: var(--red); }
 .paper .split-copy { color: var(--ink); }
+#nanjing .split-copy { position: relative; }
+.nanjing-main-photo { position: absolute; top: 230px; right: clamp(34px, 3vw, 54px); width: clamp(220px, 14.5vw, 260px); aspect-ratio: 1.527; margin: 0; overflow: hidden; }
+.nanjing-main-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .date-card { display: grid; gap: 4px; width: fit-content; margin: 30px 0; padding: 18px 22px; color: var(--paper); background: var(--red); }
 .date-card b { font: 500 34px/1 Georgia, serif; }
 .date-card span { font-weight: 700; }
@@ -155,11 +195,27 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
 .seal { display: grid; place-items: center; width: clamp(120px, 15vw, 210px); aspect-ratio: 1; margin: 0; color: var(--red); border: 2px solid var(--red); border-radius: 50%; font: 500 clamp(62px, 8vw, 120px)/1 "STKaiti", "KaiTi", serif; transform: rotate(-8deg); }
 .story-flow { display: grid; grid-template-columns: repeat(7, auto); align-items: stretch; }
 .story-flow article { max-width: 260px; min-height: 210px; padding: 24px; border: 1px solid var(--line); }
-.story-flow article.accent { color: var(--paper); background: var(--red); border-color: var(--red); }
+.story-flow article.accent { position: relative; color: var(--paper); background: var(--red); border-color: var(--red); }
 .story-flow > span { align-self: center; padding: 0 14px; color: var(--red); font-size: 24px; }
 .story-flow small { color: var(--muted); font-weight: 800; letter-spacing: .08em; }
 .story-flow .accent small { color: rgba(242,236,223,.66); }
 .story-flow h3 { margin: 50px 0 0; font-size: clamp(18px, 1.7vw, 26px); line-height: 1.55; }
+.xian-generals-photo { position: absolute; top: calc(100% + 22px); left: 0; width: 100%; aspect-ratio: 1.32; margin: 0; overflow: hidden; }
+.xian-generals-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+.xian-story-page { background: var(--paper); }
+.xian-story-page::before { content: "1936"; position: absolute; left: -2vw; bottom: -5vw; color: rgba(167,67,53,.035); font: 500 clamp(190px, 30vw, 460px)/.75 Georgia, serif; letter-spacing: -.08em; pointer-events: none; }
+.xian-story-inner { min-height: 100vh; display: grid; grid-template-columns: minmax(320px, .82fr) minmax(560px, 1.18fr); gap: clamp(58px, 8vw, 130px); align-items: center; }
+.xian-story-heading { position: relative; padding-left: 34px; border-left: 2px solid var(--red); }
+.xian-story-heading::after { content: "和"; position: absolute; right: -42px; top: -88px; display: grid; place-items: center; width: 118px; aspect-ratio: 1; color: rgba(167,67,53,.12); border: 1px solid rgba(167,67,53,.22); border-radius: 50%; font: 500 66px/1 "STKaiti", "KaiTi", serif; transform: rotate(-9deg); }
+.xian-story-heading h2 { margin: 20px 0 30px; font-size: clamp(52px, 6vw, 94px); line-height: 1.08; }
+.xian-story-heading h2 strong { color: var(--red); font-weight: 500; }
+.xian-story-intro { max-width: 440px; margin: 0; color: var(--muted); font-size: clamp(17px, 1.35vw, 22px); line-height: 1.8; }
+.xian-story-copy { position: relative; display: grid; gap: 15px; padding: 38px clamp(34px, 4vw, 64px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.16); }
+.xian-story-copy p { margin: 0; color: #4f4b45; font-size: clamp(16px, 1.22vw, 21px); line-height: 1.78; }
+.xian-story-copy strong { color: var(--red); font-weight: 800; }
+.xian-story-copy .xian-story-definition { margin: 2px 0; color: var(--ink); font: 500 clamp(25px, 2.1vw, 35px)/1.45 "STKaiti", "KaiTi", serif; }
+.xian-story-copy .xian-story-result { margin-top: 3px; padding: 17px 20px; color: var(--ink); background: rgba(167,67,53,.08); border-left: 3px solid var(--red); font-weight: 700; }
 
 .cascade { display: grid; justify-items: start; gap: 15px; margin-top: 42px; }
 .cascade p, .cascade strong { margin: 0; padding: 13px 18px; border: 1px solid var(--white-line); font-size: clamp(18px, 1.6vw, 24px); }
@@ -198,6 +254,18 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
 .map-lines i:nth-child(3) { right: 8vw; top: -10vw; transform: rotate(35deg); }
 .map-lines i:nth-child(4) { right: -18vw; bottom: -20vw; width: 58vw; height: 50vw; transform: rotate(-18deg); }
 .base-copy { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+.hundred-regiments { min-height: 100vh; display: grid; grid-template-columns: minmax(320px, .72fr) minmax(580px, 1.28fr); gap: clamp(62px, 8vw, 140px); align-items: center; }
+.hundred-heading { position: relative; padding-left: 34px; border-left: 2px solid var(--red); }
+.hundred-heading::after { content: "105"; position: absolute; left: -16px; bottom: -160px; color: rgba(167,67,53,.045); font: 500 180px/1 Georgia, serif; letter-spacing: -.08em; pointer-events: none; }
+.hundred-heading h2 { margin: 18px 0 28px; font-size: clamp(74px, 9vw, 142px); line-height: .82; }
+.hundred-heading h2 strong { color: var(--red); font-weight: 500; }
+.hundred-heading > p:last-child { max-width: 390px; margin: 0; color: var(--muted); font-size: clamp(17px, 1.4vw, 22px); font-weight: 700; line-height: 1.75; }
+.hundred-copy { position: relative; display: grid; gap: 15px; padding: 36px clamp(34px, 4vw, 62px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.18); }
+.hundred-copy p { margin: 0; color: #4f4b45; font-size: clamp(16px, 1.2vw, 20px); line-height: 1.72; }
+.hundred-copy strong { color: var(--red); font-weight: 800; }
+.hundred-copy h3 { margin: 2px 0; color: var(--ink); font: 500 clamp(24px, 2.1vw, 34px)/1.4 "STKaiti", "KaiTi", serif; }
+.hundred-copy .hundred-result { margin-top: 2px; padding: 16px 20px; color: var(--ink); background: rgba(167,67,53,.08); border-left: 3px solid var(--red); font-weight: 700; }
+.hundred-copy .event-clip { margin-top: 8px; }
 .keyword-orbits { position: absolute; right: 0; top: 50%; width: min(46vw, 650px); height: 480px; transform: translateY(-45%); }
 .keyword-orbits span { position: absolute; display: grid; place-items: center; width: clamp(112px, 12vw, 180px); aspect-ratio: 1; border-radius: 50%; border: 1px solid var(--ink); background: var(--paper); font-weight: 800; text-align: center; }
 .keyword-orbits span:nth-child(1) { left: 0; top: -22%; width: clamp(150px, 15vw, 220px); }
@@ -269,6 +337,9 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
 .peace { min-height: 100vh; }
 .peace::before { content: ""; position: absolute; width: 58vw; aspect-ratio: 1; right: -12vw; top: -12vw; border: 1px solid rgba(242,236,223,.12); border-radius: 50%; box-shadow: 0 0 0 9vw rgba(242,236,223,.018), 0 0 0 18vw rgba(242,236,223,.014); }
 .peace-copy { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+.peace-reflection { position: absolute; z-index: 2; top: clamp(142px, 17vh, 158px); right: 0; width: min(780px, 58vw); padding: 17px 24px; border-left: 3px solid var(--red-bright); background: rgba(242,236,223,.045); }
+.peace-reflection p { margin: 0; color: rgba(242,236,223,.72); font-size: clamp(14px, 1.02vw, 16px); line-height: 1.7; white-space: nowrap; }
+.peace-reflection p + p { margin-top: 5px; color: var(--paper); font-weight: 700; }
 .peace h2 strong { color: var(--red-bright); font-weight: inherit; }
 .peace-values { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 60px; border-top: 1px solid var(--white-line); }
 .peace-values article { padding: 25px 24px 25px 0; }
@@ -335,7 +406,13 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
   .chapter-inner, .chapter-inner.wide { width: min(100% - 38px, 760px); }
   .split, .split.reverse { grid-template-columns: 1fr; }
   .split .photo-panel, .split.reverse .photo-panel { order: 1; min-height: 52vh; }
+  .split .mukden-story { order: 1; min-height: auto; padding: 100px 54px 90px; }
+  .mukden-inset-photo { top: 104px; right: 54px; width: clamp(150px, 24vw, 210px); }
+  .split .lugou-story { order: 1; min-height: auto; padding: 100px 54px 90px; }
+  .split.reverse .nanjing-story { order: 2; min-height: auto; padding: 90px 54px 110px; }
+  .split.reverse .split-copy { order: 1; }
   .split .split-copy, .split.reverse .split-copy { order: 2; padding: 80px 22px 110px; }
+  .nanjing-main-photo { position: relative; top: auto; right: auto; width: min(72vw, 360px); margin: 24px 0 30px; }
   .timeline { grid-template-columns: repeat(2, 1fr); gap: 35px 24px; }
   .timeline::before { display: none; }
   .unity-grid { grid-template-columns: repeat(2, 1fr); }
@@ -343,9 +420,15 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
   .unity-grid article:nth-child(-n+2) { border-bottom: 1px solid var(--white-line); }
   .story-flow { grid-template-columns: 1fr; gap: 10px; }
   .story-flow article { max-width: none; min-height: 0; }
+  .xian-generals-photo { position: relative; top: auto; left: auto; width: 100%; margin-top: 20px; }
   .story-flow > span { transform: rotate(90deg); justify-self: center; }
   .story-flow h3 { margin-top: 28px; }
+  .xian-story-inner { min-height: auto; grid-template-columns: 1fr; gap: 54px; }
+  .xian-story-heading { max-width: 620px; }
+  .xian-story-heading::after { right: 10px; }
   .keyword-orbits { position: relative; inset: auto; width: 100%; height: 460px; margin-top: 70px; transform: none; }
+  .hundred-regiments { min-height: auto; grid-template-columns: 1fr; gap: 54px; }
+  .hundred-heading { max-width: 620px; }
   .keyword-orbits span:nth-child(1) { top: -12%; }
   .pillar-grid, .victory-grid { grid-template-columns: 1fr; }
   .team-inner, .anthem-inner { grid-template-columns: 1fr; }
@@ -354,6 +437,8 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
   .lyrics-viewport { height: 42vh; }
   .victory-grid { gap: 46px; }
   .peace-values { grid-template-columns: 1fr; }
+  .peace-reflection { position: relative; inset: auto; width: 100%; max-width: 620px; margin: 28px 0 34px; }
+  .peace-reflection p { white-space: normal; }
   .chapter-menu { grid-template-columns: 1fr; }
   .chapter-menu > p { display: none; }
 }
@@ -371,6 +456,7 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
   .hero-copy { padding-top: 120px; }
   .hero h1 { font-size: 52px; }
   .lead { font-size: 17px; }
+  .hero-lead-line { white-space: normal; }
   h2 { font-size: 42px; }
   .section-heading { display: block; }
   .timeline { grid-template-columns: 1fr 1fr; gap: 30px 14px; }
@@ -379,8 +465,18 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
   .unity-grid article { border-right: 0; border-bottom: 1px solid var(--white-line); }
   .two-col { grid-template-columns: 1fr; }
   .seal { margin-top: 30px; }
+  .xian-story-inner { gap: 38px; padding-top: 96px; }
+  .xian-story-heading { padding-left: 22px; }
+  .xian-story-heading::after { display: none; }
+  .xian-story-heading h2 { font-size: 48px; }
+  .xian-story-copy { gap: 12px; padding: 26px 22px; }
   .keyword-orbits span { width: 112px; font-size: 14px; }
   .keyword-orbits span:nth-child(1), .keyword-orbits span:nth-child(4) { width: 135px; }
+  .hundred-regiments { gap: 38px; padding-top: 96px; }
+  .hundred-heading { padding-left: 22px; }
+  .hundred-heading::after { display: none; }
+  .hundred-heading h2 { font-size: 76px; }
+  .hundred-copy { gap: 12px; padding: 26px 22px; }
   .victory-dates p { grid-template-columns: 1fr; }
   .quiz-options { grid-template-columns: 1fr; width: 100%; max-width: 320px; }
   .team-grid { grid-template-columns: 1fr; }
@@ -394,6 +490,22 @@ h2 { margin: 0; font-size: clamp(44px, 6.4vw, 96px); line-height: 1.04; }
   .speaker-button { left: 20px; bottom: 20px; }
   .speaker-note { right: 14px; bottom: 14px; width: calc(100% - 28px); padding: 28px 24px; }
   .speaker-note p { font-size: 16px; }
+  .split .mukden-story { padding: 88px 28px 86px 42px; }
+  .mukden-inset-photo { position: relative; top: auto; right: auto; width: min(68vw, 250px); margin: 0 0 28px auto; }
+  .mukden-story::after { left: 20px; }
+  .mukden-story h3 { margin-bottom: 28px; }
+  .story-text { gap: 12px; }
+  .story-reminder { margin-top: 24px; }
+  .split .lugou-story { padding: 88px 28px 86px 42px; }
+  .lugou-story::after { left: 20px; }
+  .lugou-story h3 { margin-bottom: 24px; }
+  .lugou-story-copy { gap: 11px; }
+  .lugou-story-result { margin-top: 22px; }
+  .split.reverse .nanjing-story { padding: 88px 28px 96px 42px; }
+  .nanjing-story::after { left: 20px; }
+  .nanjing-story h3 { margin-bottom: 24px; }
+  .nanjing-story-copy { gap: 11px; }
+  .nanjing-story-result { margin-top: 22px; }
   .event-viewer { padding: 8px; }
   .video-dialog { max-height: calc(100svh - 16px); }
   .video-meta { grid-template-columns: 1fr; gap: 18px; padding: 20px; }

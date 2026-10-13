@@ -1,5 +1,7 @@
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
 const chapterOrder = [
-  'cover', 'team', 'timeline', 'mukden', 'xian', 'lugou', 'nanjing',
+  'cover', 'team', 'timeline', 'mukden', 'xian', 'xian-story', 'lugou', 'nanjing',
   'unity', 'base', 'pillar', 'victory', 'peace', 'quiz', 'anthem',
 ];
 const main = document.querySelector('main');
@@ -12,6 +14,15 @@ const chapterMenu = document.querySelector('#chapterMenu');
 const prevButton = document.querySelector('#prevChapter');
 const nextButton = document.querySelector('#nextChapter');
 let activeChapter = 0;
+
+if (!window.location.hash) {
+  window.addEventListener('load', () => {
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      setActiveChapter(0);
+    });
+  });
+}
 
 const pad = (number) => String(number).padStart(2, '0');
 
